@@ -1,0 +1,110 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:8
+
+node_key: &node_key
+  key: node-deps-{{ checksum "yarn.lock" }}
+
+restore_node: &restore_node
+  restore_cache:
+    <<: *node_key
+
+save_node: &save_node
+  save_cache:
+    <<: *node_key
+    paths:
+      - node_modules
+
+install_node: &install_node
+  run:
+    name: Install node dependencies
+    command: |
+      if [ ! -d node_modules ]; then
+        yarn --pure-lockfile
+      fi
+
+deploy_steps: &deploy_steps
+  <<: *defaults
+  steps:
+    - checkout
+    - <<: *restore_node
+    - run:
+        name: "[install] install GCloud SDK"
+        command: |
+          curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --disable-prompts
+          ~/google-cloud-sdk/install.sh --usage-reporting=false --path-update=true --bash-completion=true --rc-path=~/.bashrc --additional-components kubectl
+          sudo ln -s ~/google-cloud-sdk/bin/gcloud /usr/bin
+          sudo ln -s ~/google-cloud-sdk/bin/kubectl /usr/bin
+    - setup_remote_docker:
+        docker_layer_caching: true
+    - run:
+        name: "[docker] prepare ENV vars"
+        command: |
+          echo "export GCR_IMAGE_TAG_PREFIX=${CIRCLE_TAG:-master}" >> $BASH_ENV
+    - run:
+        name: "[docker] build Docker image"
+        command: |
+          env | sed -n "s/^"$ENV"_//p" > .env
+          yarn build
+          docker build --compress --tag eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1} .
+    - run:
+        name: "[gcloud] push Docker image"
+        command: |
+          echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
+          gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
+          gcloud config set project $GCLOUD_PROJECT
+    - run:
+        name: "[gcloud] deploy"
+        command: |
+          gcloud docker -- push eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1}
+          gcloud container images add-tag eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1} eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-default
+
+
+jobs:
+  build:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - <<: *restore_node
+      - <<: *install_node
+      - <<: *save_node
+
+  deploy_staging:
+    environment:
+      ENV: STAGING
+
+    <<: *deploy_steps
+
+  deploy_prod:
+    environment:
+      ENV: PROD
+
+    <<: *deploy_steps
+
+workflows:
+  version: 2
+
+  deploy-staging:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+      - deploy_staging:
+          requires:
+            - build
+
+  deploy-prod:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^[0-9]+\.[0-9]+\.[0-9]+/
+      - deploy_prod:
+          requires:
+            - build
