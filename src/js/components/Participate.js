@@ -30,7 +30,9 @@ const Participate = () => {
 						soutenir et proposer des modifications.
 					</p>
 					<button className="pink">
-						<a href="https://en-marche.fr/comites">rejoindre un comité</a>
+						<a href="https://en-marche.fr/comites" target="_blank">
+							rejoindre un comité
+						</a>
 					</button>
 				</div>
 			</div>
