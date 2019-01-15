@@ -29,7 +29,9 @@ const Participate = () => {
 						vos propositions seront publiques et consultables par tous. Les adhérents pourront commenter,
 						soutenir et proposer des modifications.
 					</p>
-					<button className="pink">rejoindre un comité</button>
+					<button className="pink">
+						<a href="https://en-marche.fr/comites">rejoindre un comité</a>
+					</button>
 				</div>
 			</div>
 		</div>

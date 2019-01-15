@@ -12,13 +12,17 @@ const Cta = props => (
 			</div>
 			<div>
 				<div>
-					<button className="full--blue">j'adhère</button>
+					<button className="full--blue" target="_blank">
+						<a href="https://en-marche.fr/adhesion">j'adhère</a>
+					</button>
 					<div>
 						<hr />
 						<span>ou</span>
 						<hr />
 					</div>
-					<button className="pink">je fais un don</button>
+					<button className="pink" href="https://en-marche.fr/don">
+						<a href="https://en-marche.fr/don">je fais un don</a>
+					</button>
 				</div>
 			</div>
 		</div>
