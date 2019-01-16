@@ -20,8 +20,10 @@ const Cta = props => (
 						<span>ou</span>
 						<hr />
 					</div>
-					<button className="pink" href="https://en-marche.fr/don">
-						<a href="https://en-marche.fr/don">je fais un don</a>
+					<button className="pink" href="https://en-marche.fr/don" target="_blank" rel="noopener noreferrer">
+						<a href="https://en-marche.fr/don" target="_blank" rel="noopener noreferrer">
+							je fais un don
+						</a>
 					</button>
 				</div>
 			</div>

@@ -20,17 +20,19 @@ const Steps = () => {
 	return (
 		<React.Fragment>
 			<div className="steps">
-				<h5>Comment est-ce que LaREM y participe ?</h5>
-				<p className="muted">
-					En parallèle de cette organisation nationale, le mouvement La République En Marche et le groupe de
-					ses députés à l’Assemblée on tous deux décidé d’apporter une contribution en propre au débat.
-				</p>
-				<h6>La participation du mouvement en 3 phases</h6>
-				<p className="muted">
-					Notre mouvement souhaite apporter sa contribution propre et donner sa vision pour le pays en un
-					document portant des propositions pour le niveau local, national et européen, qui sera remis à
-					l’exécutif au mois de mars. Le Grand Débat La République En Marche se déroulera en trois temps :
-				</p>
+				<div className="l__wrapper--narrow">
+					<h5>Comment est-ce que LaREM y participe ?</h5>
+					<p className="muted">
+						En parallèle de cette organisation nationale, le mouvement La République En Marche et le groupe
+						de ses députés à l’Assemblée on tous deux décidé d’apporter une contribution en propre au débat.
+					</p>
+					<h6>La participation du mouvement en 3 phases</h6>
+					<p className="muted">
+						Notre mouvement souhaite apporter sa contribution propre et donner sa vision pour le pays en un
+						document portant des propositions pour le niveau local, national et européen, qui sera remis à
+						l’exécutif au mois de mars. Le Grand Débat La République En Marche se déroulera en trois temps :
+					</p>
+				</div>
 				<div className="phases">
 					{phases.map((phase, i) => (
 						<div>

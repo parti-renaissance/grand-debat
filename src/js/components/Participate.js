@@ -2,7 +2,7 @@ import React from 'react';
 import adi_preview from './../../img/adi_preview.png';
 const Participate = () => {
 	return (
-		<div className="participate">
+		<div className="participate ">
 			<h6>Je souhaite participer. Je fais comment ?</h6>
 			<div>
 				<div>
@@ -30,7 +30,7 @@ const Participate = () => {
 						soutenir et proposer des modifications.
 					</p>
 					<button className="pink">
-						<a href="https://en-marche.fr/comites" target="_blank">
+						<a href="https://en-marche.fr/comites" target="_blank" rel="noopener noreferrer">
 							rejoindre un comité
 						</a>
 					</button>

@@ -14,7 +14,7 @@ class App extends Component {
 			<div className="App">
 				<Header />
 
-				<div className="l__wrapper">
+				<div className="l__wrapper--narrow">
 					<Explanatory />
 				</div>
 				<div className="background--grey">
@@ -23,7 +23,7 @@ class App extends Component {
 					</div>
 				</div>
 				<div className="background--blue">
-					<div className="l__wrapper">
+					<div className="l__wrapper--narrow">
 						<Deputies />
 					</div>
 				</div>
@@ -35,7 +35,7 @@ class App extends Component {
 						<Workshop />
 					</div>
 				</div>
-				<div className="l__wrapper">
+				<div className="l__wrapper--narrow">
 					<Cta />
 				</div>
 			</div>
