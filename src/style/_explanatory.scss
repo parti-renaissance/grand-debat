@@ -5,6 +5,11 @@
         padding: 30px 0;
     } 
 
+
+    a {
+        color: $blue;
+    }
+
     &>div {
         display: flex;
         align-items: center;

@@ -6,19 +6,19 @@ const phases = [
 	{
 		title: 'Sur le terrain',
 		value:
-			'Nos adhérents seront à l’écoute des citoyens ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de comprendre ce qui va et ce qui ne va pas et d’aller chercher les bonnes idées chez ceux qui vivent et font les choses.',
+			'Nos adhérents seront à l’écoute des citoyens ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de comprendre ce qui va et ce qui ne va pas et d’aller chercher les bonnes idées chez ceux qui vivent et font les choses. Par ailleurs, chacun est invité à prendre part aux débats au niveau local et d’encourager les citoyens à s’y rendre',
 		img: terrain_img
 	},
 	{
 		title: "L'Atelier des Idées",
 		value:
-			'Nos adhérents pourront rédiger, seuls ou à plusieurs, en comité ou au niveau départemental, des propositions structurées grâce à un outil numérique d’intelligence collective innovant, lancé à l’occasion de ce débat. ',
+			'Nos adhérents pourront rédiger, seuls ou à plusieurs, en ligne ou lors d’événements locaux, des propositions structurées grâce à un outil numérique d’intelligence collective innovant, lancé à l’occasion de ce débat.',
 		img: adi_img
 	},
 	{
 		title: 'Co-construction',
 		value:
-			'Quatre groupes de travail (un par thématique), nommés par Stanislas Guerini, travailleront à la construction de la contribution finale portée à partir des contributions de marcheurs et d’auditions qu’ils pourront décider de mener.',
+			'Quatre groupes de travail - un par thématique - sont chargés de construire la contribution finale à partir des diverses propositions de marcheurs et d’auditions qu’ils pourront décider de mener pour éclairer leur travail.',
 		img: co_construction_img
 	}
 ];
@@ -29,15 +29,19 @@ const Steps = () => {
 				<div className="l__wrapper--narrow">
 					<h5>Comment est-ce que LaREM y participe ?</h5>
 					<p className="muted">
-						En parallèle de cette organisation nationale, le mouvement La République En Marche et le groupe
-						de ses députés à l’Assemblée on tous deux décidé d’apporter une contribution en propre au débat.
+						Nous souhaitons que chacun puisse prendre la parole dans le cadre de ce Grand Débat National -
+						c’est une opportunité unique de redevenir maîtres de notre destin collectif. C’est pourquoi nous
+						encourageons tous les marcheurs à se rendre aux débats organisés près de chez eux ou à en
+						organiser. <br />
+						<br />
+						En parallèle de cette mobilisation nationale, notre mouvement souhaite apporter sa propre
+						contribution et donner sa vision pour le pays en un document portant des propositions pour le
+						niveau local, national et européen, qui sera remis à l’exécutif au mois de mars. Ces
+						propositions, en cohérence avec le projet que nous avons porté jusqu’ici seront co-construites
+						avec les marcheurs.
 					</p>
 					<h6>La participation du mouvement en 3 phases</h6>
-					<p className="muted">
-						Notre mouvement souhaite apporter sa contribution propre et donner sa vision pour le pays en un
-						document portant des propositions pour le niveau local, national et européen, qui sera remis à
-						l’exécutif au mois de mars. Le Grand Débat La République En Marche se déroulera en trois temps :
-					</p>
+					<p className="muted">Cette contribution sera construite en 3 temps :</p>
 				</div>
 				<div className="phases">
 					{phases.map((phase, i) => (
@@ -51,9 +55,9 @@ const Steps = () => {
 						</div>
 					))}
 				</div>
-				<span className="text--center">
+				{/* <span className="text--center">
 					Dernière étape, les propositions seront validées par un comité de pilotage politique (à définir).
-				</span>
+				</span> */}
 			</div>
 		</React.Fragment>
 	);

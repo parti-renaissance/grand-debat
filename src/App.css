@@ -653,6 +653,8 @@ button a {
   @media (max-width: 650px) {
     .explanatory {
       padding: 30px 0; } }
+  .explanatory a {
+    color: #1D5FD1; }
   .explanatory > div {
     display: flex;
     align-items: center;
@@ -722,6 +724,8 @@ button a {
 
 .participate {
   padding: 80px 0; }
+  .participate em {
+    color: #1D5FD1; }
   @media (max-width: 650px) {
     .participate {
       padding: 30px 0; } }
@@ -755,7 +759,8 @@ button a {
     background-color: white;
     font-size: 14px;
     line-height: 20px;
-    cursor: not-allowed; }
+    cursor: not-allowed;
+    margin-top: 10px; }
     @media (max-width: 650px) {
       .participate button {
         width: 100%;
@@ -765,7 +770,8 @@ button a {
       color: white;
       background-color: #FF4D89;
       border: 1px solid #FF4D89;
-      transition: all 0.5s; }
+      transition: all 0.5s;
+      margin-top: 30px; }
       @media (max-width: 650px) {
         .participate button.pink {
           width: 100%;
@@ -804,7 +810,6 @@ button a {
   .workshop h4 {
     margin-bottom: 40px; }
   .workshop p {
-    width: 80%;
     margin: 0 auto; }
 
 .chiefs {
@@ -831,9 +836,8 @@ button a {
       cursor: pointer; }
   .chiefs p {
     font-family: "Roboto", Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 27px; }
+    font-size: 16px;
+    line-height: 24px; }
   .chiefs span {
     width: 70%; }
   .chiefs .blue {
@@ -848,7 +852,6 @@ button a {
   .workshop h4 {
     margin-bottom: 40px; }
   .workshop p {
-    width: 80%;
     margin: 0 auto; }
 
 .cta h4, .cta p {

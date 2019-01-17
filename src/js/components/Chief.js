@@ -4,7 +4,7 @@ const Chief = props => (
 	<div className="chief">
 		<img src={props.img} alt="photograhie de le présidente" />
 		<p>{props.title}</p>
-		<span className="muted" dangerouslySetInnerHTML={{ __html: props.description }} />
+		<p className="muted" dangerouslySetInnerHTML={{ __html: props.description }} />
 	</div>
 );
 

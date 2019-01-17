@@ -30,8 +30,7 @@
     }
     p {
         font-family: $font-roboto;
-        font-weight: bold;
-        @include text--medium-small;
+        @include text--default;
     }
     span {
         width: 70%;

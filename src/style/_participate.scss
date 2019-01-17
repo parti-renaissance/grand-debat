@@ -1,6 +1,10 @@
 .participate {
     padding: 80px 0;
 
+    em{
+        color: $blue;
+    } 
+    
     @media (max-width: $mobile) {
         padding: 30px 0;
     } 
@@ -46,6 +50,7 @@
        background-color: white;
        @include text--small;
        cursor: not-allowed;
+       margin-top: 10px;
 
        @media (max-width: $mobile) {
         width: 100%;
@@ -66,6 +71,7 @@
            background-color: $pink;
            border: 1px solid $pink;
            transition: all 0.5s;
+           margin-top: 30px;
 
            @media (max-width: $mobile) {
             width: 100%;
