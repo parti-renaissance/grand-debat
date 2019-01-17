@@ -37,6 +37,7 @@ deploy_steps: &deploy_steps
           ~/google-cloud-sdk/install.sh --usage-reporting=false --path-update=true --bash-completion=true --rc-path=~/.bashrc --additional-components kubectl
           sudo ln -s ~/google-cloud-sdk/bin/gcloud /usr/bin
           sudo ln -s ~/google-cloud-sdk/bin/kubectl /usr/bin
+          sudo ln -s ~/google-cloud-sdk/bin/gsutil /usr/bin
     - setup_remote_docker:
         docker_layer_caching: true
     - run:
@@ -55,12 +56,11 @@ deploy_steps: &deploy_steps
           echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
           gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
           gcloud config set project $GCLOUD_PROJECT
-    - run:
-        name: "[gcloud] deploy"
-        command: |
-          gcloud docker -- push eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1}
-          gcloud container images add-tag eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1} eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-default
 
+    - run:
+        name: "[gsutil] push image to "
+        command: |
+          gsutil cp -r build/* gs://grand-debat-staging
 
 jobs:
   build:
@@ -92,7 +92,7 @@ workflows:
       - build:
           filters:
             branches:
-              only: master
+              only: gcloud-storage
       - deploy_staging:
           requires:
             - build
