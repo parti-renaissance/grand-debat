@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-roboto;
+  padding: 40px 0;
+  justify-content: center;
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+  }
+
+  li {
+    padding: 0 10px;
+  }
+}
