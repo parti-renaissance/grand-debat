@@ -48,7 +48,7 @@ deploy_steps: &deploy_steps
     - run:
         name: "[gsutil] push image to "
         command: |
-          gsutil rsync -R build $BUCKET
+          gsutil rsync -R build/ $BUCKET
 
 jobs:
   build:
