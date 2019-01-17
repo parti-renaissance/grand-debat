@@ -12,8 +12,10 @@ const Cta = props => (
 			</div>
 			<div>
 				<div>
-					<button className="full--blue" target="_blank" rel="noopener noreferrer">
-						<a href="https://en-marche.fr/adhesion">j'adhère</a>
+					<button className="full--blue">
+						<a href="https://en-marche.fr/adhesion" target="_blank" rel="noopener noreferrer">
+							j'adhère
+						</a>
 					</button>
 					<div>
 						<hr />
