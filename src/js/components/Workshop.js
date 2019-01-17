@@ -42,7 +42,7 @@ const Workshop = () => {
 			<p>Nos présidentes sont là pour vous éclairer :</p>
 			<div className="chiefs">
 				{chiefs.map(chief => (
-					<Chief title={chief.title} description={chief.description} img={chief.img} />
+					<Chief key={chief.title} title={chief.title} description={chief.description} img={chief.img} />
 				))}
 			</div>
 			<p className="small">

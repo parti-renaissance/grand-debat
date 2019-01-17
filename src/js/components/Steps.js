@@ -1,19 +1,25 @@
 import React from 'react';
+import terrain_img from './../../img/gd-illu-01.svg';
+import adi_img from './../../img/gd-illu-02.svg';
+import co_construction_img from './../../img/gd-illu-03.svg';
 const phases = [
 	{
 		title: 'Sur le terrain',
 		value:
-			'Nos adhérents seront à l’écoute des citoyens ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de comprendre ce qui va et ce qui ne va pas et d’aller chercher les bonnes idées chez ceux qui vivent et font les choses.'
+			'Nos adhérents seront à l’écoute des citoyens ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de comprendre ce qui va et ce qui ne va pas et d’aller chercher les bonnes idées chez ceux qui vivent et font les choses.',
+		img: terrain_img
 	},
 	{
 		title: "L'Atelier des Idées",
 		value:
-			'Nos adhérents pourront rédiger, seuls ou à plusieurs, en comité ou au niveau départemental, des propositions structurées grâce à un outil numérique d’intelligence collective innovant, lancé à l’occasion de ce débat. '
+			'Nos adhérents pourront rédiger, seuls ou à plusieurs, en comité ou au niveau départemental, des propositions structurées grâce à un outil numérique d’intelligence collective innovant, lancé à l’occasion de ce débat. ',
+		img: adi_img
 	},
 	{
 		title: 'Co-construction',
 		value:
-			'Quatre groupes de travail (un par thématique), nommés par Stanislas Guerini, travailleront à la construction de la contribution finale portée à partir des contributions de marcheurs et d’auditions qu’ils pourront décider de mener.'
+			'Quatre groupes de travail (un par thématique), nommés par Stanislas Guerini, travailleront à la construction de la contribution finale portée à partir des contributions de marcheurs et d’auditions qu’ils pourront décider de mener.',
+		img: co_construction_img
 	}
 ];
 const Steps = () => {
@@ -35,8 +41,12 @@ const Steps = () => {
 				</div>
 				<div className="phases">
 					{phases.map((phase, i) => (
-						<div>
-							<span> {i + 1} </span> <h4>{phase.title}</h4>
+						<div key={i}>
+							{/* <span> {i + 1} </span>
+							<br /> */}
+							<img src={phase.img} alt={phase.img} />
+
+							<h4>{phase.title}</h4>
 							<p>{phase.value}</p>
 						</div>
 					))}

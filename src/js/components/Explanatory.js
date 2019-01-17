@@ -19,7 +19,7 @@ const Explanatory = () => {
 			<div>
 				<div>
 					{phases.map((phase, i) => (
-						<div>
+						<div key={i}>
 							<span> {i + 1} </span> <p>{phase}</p>
 						</div>
 					))}

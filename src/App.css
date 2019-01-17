@@ -1,35 +1,35 @@
 @font-face {
   font-family: 'Gillsans';
-  src: url("/fonts/gillsans-light.eot");
-  src: url("/fonts/gillsans-light.eot?#iefix") format("embedded-opentype"), url("/fonts/gillsans-light.woff2") format("woff2"), url("/fonts/gillsans-light.woff") format("woff"), url("/fonts/gillsans-light.ttf") format("truetype"), url("/fonts/gillsans-light.svg#gillsans_lightregular") format("svg");
+  src: url("./fonts/gillsans-light.eot");
+  src: url("./fonts/gillsans-light.eot?#iefix") format("embedded-opentype"), url("./fonts/gillsans-light.woff2") format("woff2"), url("./fonts/gillsans-light.woff") format("woff"), url("./fonts/gillsans-light.ttf") format("truetype"), url("./fonts/gillsans-light.svg#gillsans_lightregular") format("svg");
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gillsans';
-  src: url("/fonts/gillsans-regular.eot");
-  src: url("/fonts/gillsans-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/gillsans-regular.woff2") format("woff2"), url("/fonts/gillsans-regular.woff") format("woff"), url("/fonts/gillsans-regular.ttf") format("truetype");
+  src: url("./fonts/gillsans-regular.eot");
+  src: url("./fonts/gillsans-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/gillsans-regular.woff2") format("woff2"), url("./fonts/gillsans-regular.woff") format("woff"), url("./fonts/gillsans-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gillsans';
-  src: url("/fonts/gillsans-italic.eot");
-  src: url("/fonts/gillsans-italic.eot?#iefix") format("embedded-opentype"), url("/fonts/gillsans-italic.woff2") format("woff2"), url("/fonts/gillsans-italic.woff") format("woff"), url("/fonts/gillsans-italic.ttf") format("truetype");
+  src: url("./fonts/gillsans-italic.eot");
+  src: url("./fonts/gillsans-italic.eot?#iefix") format("embedded-opentype"), url("./fonts/gillsans-italic.woff2") format("woff2"), url("./fonts/gillsans-italic.woff") format("woff"), url("./fonts/gillsans-italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic; }
 
 @font-face {
   font-family: 'Gillsans';
-  src: url("/fonts/gillsans-heavy.eot");
-  src: url("/fonts/gillsans-heavy.eot?#iefix") format("embedded-opentype"), url("/fonts/gillsans-heavy.woff2") format("woff2"), url("/fonts/gillsans-heavy.woff") format("woff"), url("/fonts/gillsans-heavy.ttf") format("truetype");
+  src: url("./fonts/gillsans-heavy.eot");
+  src: url("./fonts/gillsans-heavy.eot?#iefix") format("embedded-opentype"), url("./fonts/gillsans-heavy.woff2") format("woff2"), url("./fonts/gillsans-heavy.woff") format("woff"), url("./fonts/gillsans-heavy.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gillsans';
-  src: url("/fonts/gillsans-heavy-italic.eot");
-  src: url("/fonts/gillsans-heavy-italic.eot?#iefix") format("embedded-opentype"), url("/fonts/gillsans-heavy-italic.woff2") format("woff2"), url("/fonts/gillsans-heavy-italic.woff") format("woff"), url("/fonts/gillsans-heavy-italic.ttf") format("truetype");
+  src: url("./fonts/gillsans-heavy-italic.eot");
+  src: url("./fonts/gillsans-heavy-italic.eot?#iefix") format("embedded-opentype"), url("./fonts/gillsans-heavy-italic.woff2") format("woff2"), url("./fonts/gillsans-heavy-italic.woff") format("woff"), url("./fonts/gillsans-heavy-italic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic; }
 
@@ -680,9 +680,14 @@ button a {
   .steps .phases {
     display: flex;
     justify-content: space-around; }
-    @media (max-width: 650px) {
+    @media (max-width: 1000px) {
       .steps .phases {
         flex-direction: column; } }
+    .steps .phases img {
+      width: 80%; }
+      @media (max-width: 650px) {
+        .steps .phases img {
+          width: 60%; } }
     .steps .phases > div {
       width: 30%;
       text-align: center;
@@ -693,6 +698,9 @@ button a {
         padding: 7px 13px;
         border-radius: 50%;
         margin-bottom: 10px; }
+      @media (max-width: 1000px) {
+        .steps .phases > div {
+          width: 100%; } }
       @media (max-width: 650px) {
         .steps .phases > div {
           width: 100%;
@@ -746,18 +754,23 @@ button a {
     border: 1px solid #1D5FD1;
     background-color: white;
     font-size: 14px;
-    line-height: 20px; }
-    .participate button:hover {
-      background-color: #1D5FD1;
-      color: white;
-      border: 1px solid #1D5FD1;
-      transition: all 0.5s;
-      cursor: pointer; }
+    line-height: 20px;
+    cursor: not-allowed; }
+    @media (max-width: 650px) {
+      .participate button {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px; } }
     .participate button.pink {
       color: white;
       background-color: #FF4D89;
       border: 1px solid #FF4D89;
       transition: all 0.5s; }
+      @media (max-width: 650px) {
+        .participate button.pink {
+          width: 100%;
+          padding: 20px;
+          margin-top: 20px; } }
       .participate button.pink:hover {
         background-color: white;
         color: #FF4D89;
@@ -769,9 +782,18 @@ button a {
     font-weight: 500;
     font-family: "Roboto", Helvetica, sans-serif;
     margin-left: 15px; }
+    @media (max-width: 650px) {
+      .participate small {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px; } }
   .participate img {
     width: 80%;
     margin-top: 30px; }
+    @media (max-width: 650px) {
+      .participate img {
+        width: 100%; } }
 
 .workshop {
   padding: 80px 0;
@@ -795,10 +817,18 @@ button a {
       flex-direction: column;
       padding: 30px 0; } }
   .chiefs img {
-    width: 80%; }
+    width: 80%;
+    position: relative;
+    bottom: 0px;
+    transition: all 0.3s; }
     @media (max-width: 1000px) {
       .chiefs img {
         margin-top: 30px; } }
+    .chiefs img:hover {
+      position: relative;
+      bottom: 3px;
+      transition: all 0.3s;
+      cursor: pointer; }
   .chiefs p {
     font-family: "Roboto", Helvetica, sans-serif;
     font-weight: bold;

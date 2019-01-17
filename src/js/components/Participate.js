@@ -11,7 +11,9 @@ const Participate = () => {
 						repense la remontée d’idées et de propositions de politiques publiques au sein de notre
 						mouvement. Il sera accessible à nos adhérents.
 					</p>
-					<button>atelier des idées</button>
+					<button type="button" disabled>
+						atelier des idées
+					</button>
 					<small>Bientôt disponible</small>
 					<br />
 					<img src={adi_preview} alt="atelier des idées" />

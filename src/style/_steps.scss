@@ -16,9 +16,16 @@
     .phases {
         display: flex;
         justify-content: space-around;  
-        @media (max-width: $mobile) {
+        
+        @media (max-width: $tablet) {
             flex-direction: column;
         } 
+        img {
+            width: 80%;
+            @media (max-width: $mobile) {
+                width: 60%;
+            } 
+        }
 
         &>div {
             span {
@@ -32,6 +39,10 @@
             width: 30%;
             text-align: center;
             margin: 70px 0;
+
+            @media (max-width: $tablet) {
+                width: 100%;
+            } 
 
             @media (max-width: $mobile) {
                 width: 100%;

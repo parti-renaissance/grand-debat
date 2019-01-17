@@ -45,20 +45,33 @@
        border: 1px solid $blue;
        background-color: white;
        @include text--small;
+       cursor: not-allowed;
 
-       &:hover{
-        background-color: $blue;
-        color: white;
-        border: 1px solid $blue;
-        transition: all 0.5s;
-        cursor: pointer;
-       } 
+       @media (max-width: $mobile) {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+     } 
+
+    //    &:hover{
+    //     background-color: $blue;
+    //     color: white;
+    //     border: 1px solid $blue;
+    //     transition: all 0.5s;
+    //     cursor: pointer;
+    //    } 
 
        &.pink {
            color:white;
            background-color: $pink;
            border: 1px solid $pink;
            transition: all 0.5s;
+
+           @media (max-width: $mobile) {
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+         } 
         
            &:hover{
             background-color: white;
@@ -74,10 +87,20 @@
        font-weight: 500;
        font-family: $font-roboto;
        margin-left: 15px;
+
+       @media (max-width: $mobile) {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+     } 
    }
 
    img {
        width: 80%;
        margin-top: 30px;
+       @media (max-width: $mobile) {
+        width: 100%;
+     } 
    }
 }
