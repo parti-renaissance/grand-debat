@@ -542,6 +542,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osk-font-smoothing: grayscale; }
 
+a {
+  color: #1D5FD1;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
 h1, h2, h3, h4 {
   margin: 0;
   font-weight: 700; }
@@ -578,7 +584,7 @@ p {
   font-family: "Roboto", Helvetica, sans-serif; }
 
 .muted {
-  color: #7F7F7F; }
+  color: #6A6A6A; }
 
 h4 {
   font-size: 34px;
@@ -595,12 +601,16 @@ h5 {
   line-height: 32px; }
 
 h6 {
+  margin: 10px 0 20px;
   font-size: 24px;
   line-height: 1.2em; }
   @media (max-width: 650px) {
     h6 {
       font-size: 20px;
       line-height: 27px; } }
+  @media (max-width: 650px) {
+    h6 {
+      margin: 15px 0 30px; } }
 
 .background--grey {
   background-color: #FAFBFC; }
@@ -721,7 +731,7 @@ button a {
     .steps .phases > div {
       width: 30%;
       text-align: center;
-      margin: 70px 0; }
+      margin: 10px 0; }
       .steps .phases > div span {
         color: #1D5FD1;
         background-color: #EBF8FF;
@@ -744,37 +754,36 @@ button a {
 .deputies {
   padding: 80px 0; }
   @media (max-width: 650px) {
-    .deputies h6 {
-      margin: 0 0 20px 0; } }
-  @media (max-width: 650px) {
     .deputies {
       padding: 30px 0; } }
 
 .participate {
   padding: 80px 0; }
-  .participate em {
-    color: #1D5FD1; }
+  .participate__grid {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 650px) {
+      .participate__grid {
+        flex-direction: column; } }
+  .participate__header {
+    color: #1D5FD1;
+    font-weight: bold;
+    font-style: italic; }
   @media (max-width: 650px) {
     .participate {
       padding: 30px 0; } }
-  @media (max-width: 650px) {
-    .participate h6 {
-      margin: 0 0 20px 0; } }
-  .participate > div {
-    display: flex;
-    justify-content: center;
-    flex-direction: row; }
+  .participate h4 {
+    margin-bottom: 20px; }
     @media (max-width: 650px) {
-      .participate > div {
-        flex-direction: column; } }
-    .participate > div > div {
-      width: 100%;
-      text-align: center; }
-      .participate > div > div p {
-        width: 90%; }
-        @media (max-width: 650px) {
-          .participate > div > div p {
-            width: 100%; } }
+      .participate h4 {
+        margin: 0 0 20px 0; } }
+  .participate > div > div {
+    width: 100%; }
+    .participate > div > div p {
+      width: 90%; }
+      @media (max-width: 650px) {
+        .participate > div > div p {
+          width: 100%; } }
   .participate h6 {
     margin-bottom: 10px; }
   .participate button {
@@ -821,8 +830,8 @@ button a {
         display: block;
         margin-top: 20px; } }
   .participate img {
-    width: 70%;
-    margin-top: 30px; }
+    width: 95%;
+    margin-top: 10px; }
     @media (max-width: 650px) {
       .participate img {
         width: 100%; } }
@@ -918,7 +927,7 @@ button a {
         .cta > div > div > div > div span {
           margin: 0 10px;
           align-items: center;
-          color: #D1D1D1;
+          color: #C9C9C9;
           bottom: 1px;
           position: relative; }
 
@@ -957,6 +966,6 @@ button a {
       cursor: pointer; }
 
 .cta hr {
-  border: 0.5px solid #D1D1D1;
+  border: 0.5px solid #C9C9C9;
   width: 80%;
   margin: 0 auto; }

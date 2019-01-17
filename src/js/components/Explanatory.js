@@ -17,14 +17,14 @@ const Explanatory = () => {
 				Françaises et des Français sur quatre grandes thématiques liées à nos institutions et nos politiques
 				publiques.{' '}
 				<a href="https://granddebat.fr/" target="_blank" rel="noopener noreferrer">
-					<em>En savoir plus.</em>
+					<em>En savoir plus</em>.
 				</a>
 			</p>
 			<div>
 				<div>
 					{phases.map((phase, i) => (
 						<div key={i}>
-							<span> {i + 1} </span> <p>{phase}</p>
+							<span> {i + 1} </span> <p className="phase--name">{phase}</p>
 						</div>
 					))}
 				</div>

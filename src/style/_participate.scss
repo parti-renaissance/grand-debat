@@ -1,44 +1,59 @@
 .participate {
     padding: 80px 0;
 
-    em{
-        color: $blue;
-    } 
-    
-    @media (max-width: $mobile) {
-        padding: 30px 0;
-    } 
-    h6 {
-        @media (max-width: $mobile) {
-            margin: 0 0 20px 0;
-         } 
-    }
-    &>div {
+    &__grid {
         display: flex;
-        justify-content: center;
-        flex-direction: row;
+        justify-content: space-between;
 
         @media (max-width: $mobile) {
             flex-direction: column;
-        } 
+        }
+    }
 
-        &>div {
+    &__header {
+        color: $blue;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 30px 0;
+    }
+
+    h4 {
+        margin-bottom: 20px;
+
+        @media (max-width: $mobile) {
+            margin: 0 0 20px 0;
+         }
+    }
+
+    & > div {
+        // display: flex;
+        // justify-content: center;
+        // flex-direction: row;
+
+        // @media (max-width: $mobile) {
+        //     flex-direction: column;
+        // }
+
+        & > div {
             width: 100%;
-            text-align: center;
-            
-            p{
+
+            p {
                 width: 90%;
 
                 @media (max-width: $mobile) {
                     width: 100%;
-                } 
+                }
             }
         }
     }
-     
+
     h6 {
         margin-bottom: 10px;
     }
+
     button {
        text-transform: uppercase;
        color: $blue;
@@ -53,7 +68,7 @@
         width: 100%;
         padding: 20px;
         margin-top: 20px;
-     } 
+     }
 
     //    &:hover{
     //     background-color: $blue;
@@ -61,7 +76,7 @@
     //     border: 1px solid $blue;
     //     transition: all 0.5s;
     //     cursor: pointer;
-    //    } 
+    //    }
 
        &.pink {
            color:white;
@@ -74,15 +89,15 @@
             width: 100%;
             padding: 20px;
             margin-top: 20px;
-         } 
-        
+         }
+
            &:hover{
             background-color: white;
             color: $pink;
             border: 1px solid $pink;
             transition: all 0.5s;
             cursor: pointer;
-           } 
+           }
        }
     }
     small {
@@ -96,15 +111,15 @@
         margin: 0 auto;
         display: block;
         margin-top: 20px;
-     } 
+     }
    }
 
    img {
-       width: 70%;
-       margin-top: 30px;
+       width: 95%;
+       margin-top: 10px;
 
        @media (max-width: $mobile) {
         width: 100%;
-     } 
+     }
    }
 }

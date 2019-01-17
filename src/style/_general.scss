@@ -17,6 +17,14 @@ body {
     -moz-osk-font-smoothing: grayscale;
 }
 
+a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+}
 
 h1, h2, h3, h4 {
     margin: 0;
@@ -58,10 +66,8 @@ table {
 }
 
 p {
-
    @include text--default;
     font-family: $font-roboto;
-
 }
 
 .muted {
@@ -77,7 +83,12 @@ h5 {
 }
 
 h6 {
+    margin: 10px 0 20px;
     @include text--medium;
+
+    @media (max-width: $mobile) {
+        margin: 15px 0 30px;
+     }
 }
 
 .background--grey {
@@ -87,7 +98,7 @@ h6 {
 .background--blue {
     background-color: $background-blue;
     color: white;
-    
+
     p {
         color: white;
     }
