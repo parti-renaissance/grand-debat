@@ -49,9 +49,10 @@ deploy_steps: &deploy_steps
         command: |
           yarn build
     - run:
-        name: "[gsutil] push image to "
+        name: "[gsutil] push image to a google storage bucket"
         command: |
           gsutil rsync -R build $BUCKET
+          gsutil web set -m index.html $BUCKET
 
 jobs:
   build:
