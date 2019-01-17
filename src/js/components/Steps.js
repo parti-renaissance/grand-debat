@@ -6,7 +6,7 @@ const phases = [
 	{
 		title: 'Sur le terrain',
 		value:
-			'Nos adhérents seront à l’écoute des citoyens ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de comprendre ce qui va et ce qui ne va pas et d’aller chercher les bonnes idées chez ceux qui vivent et font les choses. Par ailleurs, chacun est invité à prendre part aux débats au niveau local et d’encourager les citoyens à s’y rendre',
+			'Nos adhérents seront à l’écoute des citoyens ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de comprendre ce qui va et ce qui ne va pas et d’aller chercher les bonnes idées chez ceux qui vivent et font les choses.',
 		img: terrain_img
 	},
 	{
