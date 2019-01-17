@@ -16,7 +16,7 @@ const Explanatory = () => {
 				décembre par le président de la République et le Gouvernement pour prendre les contributions des
 				Françaises et des Français sur quatre grandes thématiques liées à nos institutions et nos politiques
 				publiques.{' '}
-				<a href="https://granddebat.fr/">
+				<a href="https://granddebat.fr/" target="_blank" rel="noopener noreferrer">
 					<em>En savoir plus.</em>
 				</a>
 			</p>
