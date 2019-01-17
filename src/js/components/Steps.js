@@ -6,19 +6,19 @@ const phases = [
 	{
 		title: 'Sur le terrain',
 		value:
-			'Nos adhérents seront à l’écoute des citoyens ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de comprendre ce qui va et ce qui ne va pas et d’aller chercher les bonnes idées chez ceux qui vivent et font les choses.',
+			'Nos adhérents seront à <b>l’écoute des citoyens</b> ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de <b>comprendre ce qui va et ce qui ne va pas</b> et d’<b>aller chercher les bonnes idées chez ceux qui vivent et font les choses.</b>',
 		img: terrain_img
 	},
 	{
 		title: "L'Atelier des Idées",
 		value:
-			'Nos adhérents pourront rédiger, seuls ou à plusieurs, en ligne ou lors d’événements locaux, des propositions structurées grâce à un outil numérique d’intelligence collective innovant, lancé à l’occasion de ce débat.',
+			'Nos adhérents pourront <b>rédiger</b>, seuls ou à plusieurs, en ligne ou lors d’événements locaux,<b> des propositions structurées grâce à un outil numérique d’intelligence collective innovant</b>, lancé à l’occasion de ce débat.',
 		img: adi_img
 	},
 	{
 		title: 'Co-construction',
 		value:
-			'Quatre groupes de travail - un par thématique - sont chargés de construire la contribution finale à partir des diverses propositions de marcheurs et d’auditions qu’ils pourront décider de mener pour éclairer leur travail.',
+			'<a href="#Workshop">Quatre groupes de travail</a> - un par thématique - sont chargés de <b>construire la contribution finale</b> à partir des diverses propositions de marcheurs et d’auditions qu’ils pourront décider de mener pour éclairer leur travail.',
 		img: co_construction_img
 	}
 ];
@@ -27,7 +27,7 @@ const Steps = () => {
 		<React.Fragment>
 			<div className="steps">
 				<div className="l__wrapper--narrow">
-					<h5>Comment est-ce que LaREM y participe ?</h5>
+					<h4>Comment est-ce que LaREM y participe ?</h4>
 					<p className="muted">
 						Nous souhaitons que chacun puisse prendre la parole dans le cadre de ce Grand Débat National -
 						c’est une opportunité unique de redevenir maîtres de notre destin collectif. C’est pourquoi nous
@@ -50,7 +50,7 @@ const Steps = () => {
 							<img src={phase.img} alt={phase.img} />
 
 							<h4>{phase.title}</h4>
-							<p>{phase.value}</p>
+							<p dangerouslySetInnerHTML={{ __html: phase.value }} />
 						</div>
 					))}
 				</div>

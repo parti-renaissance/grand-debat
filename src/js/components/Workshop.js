@@ -29,7 +29,7 @@ const Workshop = () => {
 		}
 	];
 	return (
-		<div className="workshop">
+		<div className="workshop" id="Workshop">
 			<h4>Les groupes des travail</h4>
 			<div className="l__wrapper--narrow">
 				<p>

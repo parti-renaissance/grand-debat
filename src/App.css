@@ -768,7 +768,8 @@ button a {
       .participate > div {
         flex-direction: column; } }
     .participate > div > div {
-      width: 100%; }
+      width: 100%;
+      text-align: center; }
       .participate > div > div p {
         width: 90%; }
         @media (max-width: 650px) {
@@ -820,7 +821,7 @@ button a {
         display: block;
         margin-top: 20px; } }
   .participate img {
-    width: 100%;
+    width: 70%;
     margin-top: 30px; }
     @media (max-width: 650px) {
       .participate img {
