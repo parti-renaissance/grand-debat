@@ -632,7 +632,7 @@ button a {
   padding: 80px 0 200px 0; }
   @media (max-width: 650px) {
     .header {
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .header h1 {
     font-size: 64px;
     letter-spacing: -1.5px;
@@ -656,20 +656,21 @@ button a {
       line-height: 38px; } }
   .header h3 {
     margin-bottom: 5%;
-    font-size: 28px;
-    letter-spacing: -0.6px;
-    line-height: 32px;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+    line-height: 38px;
     text-align: left;
     margin-left: 5%; }
     @media (max-width: 650px) {
       .header h3 {
-        font-size: 24px;
-        line-height: 1.2em;
+        font-size: 28px;
+        line-height: 1.2em; } }
+    @media (max-width: 650px) {
+      .header h3 {
+        font-size: 28px;
+        letter-spacing: -0.6px;
+        line-height: 32px;
         text-align: center; } }
-  @media (max-width: 650px) and (max-width: 650px) {
-    .header h3 {
-      font-size: 20px;
-      line-height: 27px; } }
   .header .type-wrap span {
     font-size: 48px;
     letter-spacing: -1.5px;
@@ -690,7 +691,7 @@ button a {
   padding: 80px 0; }
   @media (max-width: 650px) {
     .explanatory {
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .explanatory a {
     color: #1D5FD1; }
   .explanatory > div {
@@ -712,7 +713,7 @@ button a {
   padding: 80px 0; }
   @media (max-width: 650px) {
     .steps {
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .steps h5 {
     margin: 0 0 20px 0; }
   .steps h6 {
@@ -744,7 +745,7 @@ button a {
       @media (max-width: 650px) {
         .steps .phases > div {
           width: 100%;
-          margin: 30px 0; } }
+          margin: 50px 0; } }
       .steps .phases > div h4 {
         margin-top: 40px;
         margin-bottom: 20px; }
@@ -755,7 +756,7 @@ button a {
   padding: 80px 0; }
   @media (max-width: 650px) {
     .deputies {
-      padding: 30px 0; } }
+      padding: 50px 0; } }
 
 .participate {
   padding: 80px 0; }
@@ -771,7 +772,7 @@ button a {
     font-style: italic; }
   @media (max-width: 650px) {
     .participate {
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .participate h4 {
     margin-bottom: 20px; }
     @media (max-width: 650px) {
@@ -841,7 +842,7 @@ button a {
   text-align: center; }
   @media (max-width: 650px) {
     .workshop {
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .workshop h4 {
     margin-bottom: 40px; }
   .workshop p {
@@ -855,7 +856,7 @@ button a {
   @media (max-width: 1000px) {
     .chiefs {
       flex-direction: column;
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .chiefs img {
     width: 80%;
     position: relative;
@@ -883,7 +884,7 @@ button a {
   text-align: center; }
   @media (max-width: 650px) {
     .workshop {
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .workshop h4 {
     margin-bottom: 40px; }
   .workshop p {
@@ -895,6 +896,9 @@ button a {
 .cta p {
   font-size: 16px; }
 
+.cta a:hover {
+  text-decoration: none; }
+
 .cta > div {
   padding: 80px 0;
   display: flex;
@@ -903,7 +907,7 @@ button a {
   @media (max-width: 650px) {
     .cta > div {
       flex-direction: column;
-      padding: 30px 0; } }
+      padding: 50px 0; } }
   .cta > div > div {
     width: 50%;
     align-items: center;

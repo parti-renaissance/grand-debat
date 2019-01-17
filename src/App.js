@@ -7,6 +7,7 @@ import Participate from './js/components/Participate';
 import Deputies from './js/components/Deputies';
 import Workshop from './js/components/Workshop';
 import Cta from './js/components/Cta';
+import Footer from './js/components/Footer';
 
 class App extends Component {
 	render() {
@@ -37,6 +38,11 @@ class App extends Component {
 				</div>
 				<div className="l__wrapper--narrow">
 					<Cta />
+				</div>
+				<div className="background--grey">
+					<div className="l__wrapper">
+						<Footer />
+					</div>
 				</div>
 			</div>
 		);

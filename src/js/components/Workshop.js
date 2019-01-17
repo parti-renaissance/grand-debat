@@ -37,21 +37,19 @@ const Workshop = () => {
 			<h4>Les groupes des travail</h4>
 			<div className="l__wrapper--narrow">
 				<p>
-					Les groupes de travail de La République En Marche sont présidés par 4 personnalités politiques
-					d’envergure qui s’assureront que le débat soit le plus ouvert et transparent possible, et que nos
-					propositions soient aussi ambitieuses que notre mouvement. Ces groupes remettront la contribution du
+					Les groupes de travail de La République En Marche sont présidés par <strong>4 personnalités politiques
+					d’envergure qui s’assureront</strong> que le débat soit le plus ouvert et transparent possible, et <strong>que nos
+					propositions soient aussi ambitieuses que notre mouvement</strong>. Ces groupes remettront la contribution du
 					mouvement au Gouvernement sur la base des propositions de marcheurs.
 					<br />
 				</p>
 				<br />
-				<p>Vous souhaitez en apprendre davantage sur les différents groupes de travail </p>
+				<p>Vous souhaitez en apprendre davantage sur les différents groupes de travail, regardez les présidentes en parler :</p>
 			</div>
 
 			<div className="chiefs">
 				{chiefs.map(chief => (
-					// <a href="key={chief.url}">
 						<Chief key={chief.title} url={chief.url} title={chief.title} description={chief.description} img={chief.img} />
-					// </a>
 				))}
 			</div>
 			<p className="small">
