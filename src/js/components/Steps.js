@@ -41,7 +41,6 @@ const Steps = () => {
 						avec les marcheurs.
 					</p>
 					<h6>La participation du mouvement en 3 phases</h6>
-					<p className="muted">Cette contribution sera construite en 3 temps :</p>
 				</div>
 				<div className="phases">
 					{phases.map((phase, i) => (

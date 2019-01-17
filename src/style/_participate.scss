@@ -23,11 +23,7 @@
         } 
 
         &>div {
-            width: 50%;
-
-            @media (max-width: $mobile) {
-                width: 100%;
-            } 
+            width: 100%;
             
             p{
                 width: 90%;
@@ -103,8 +99,9 @@
    }
 
    img {
-       width: 80%;
+       width: 100%;
        margin-top: 30px;
+
        @media (max-width: $mobile) {
         width: 100%;
      } 
