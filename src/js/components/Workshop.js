@@ -9,23 +9,27 @@ const Workshop = () => {
 		{
 			title: 'Brune POIRSON',
 			description: 'Présidente du groupe de travail sur <p class="blue">la vie quotidienne</p>',
-			img: poirson_img
+			img: poirson_img,
+			url: 'https://youtu.be/YNJl4GZmwTs'
 		},
 		{
 			title: 'Marlène SCHIAPPA',
 			description: 'Présidente du groupe de travail sur <p class="blue">la démocratie et la citoyenneté</p>',
-			img: schiappa_img
+			img: schiappa_img,
+			url: 'https://youtu.be/hnTvdhbwpg0'
 		},
 		{
 			title: 'Sophie ERRANTE',
 			description:
 				'Présidente du groupe de travail sur <p class="blue">l’organisation de l’État<br/> et les services publics</p>',
-			img: errante_img
+			img: errante_img,
+			url: 'https://www.youtube.com/watch?v=GHBBoZIX_Vs'
 		},
 		{
 			title: 'Bénédicte PEYROL',
 			description: 'Présidente du groupe de travail sur <p class="blue">la fiscalité</p>',
-			img: peyrol_img
+			img: peyrol_img,
+			url: 'https://youtu.be/hTQZ1iS0dX8'
 		}
 	];
 	return (
@@ -45,7 +49,9 @@ const Workshop = () => {
 
 			<div className="chiefs">
 				{chiefs.map(chief => (
-					<Chief key={chief.title} title={chief.title} description={chief.description} img={chief.img} />
+					// <a href="key={chief.url}">
+						<Chief key={chief.title} url={chief.url} title={chief.title} description={chief.description} img={chief.img} />
+					// </a>
 				))}
 			</div>
 			<p className="small">
