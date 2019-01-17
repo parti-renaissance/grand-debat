@@ -66,14 +66,14 @@ jobs:
   deploy_staging:
     environment:
       ENV: STAGING
-      BUCKET: gs://grand-debat.en-marche.fr
+      BUCKET: gs://staging-grand-debat.en-marche.fr
 
     <<: *deploy_steps
 
   deploy_prod:
     environment:
       ENV: PROD
-      BUCKET: gs://staging-grand-debat.en-marche.fr
+      BUCKET: gs://grand-debat.en-marche.fr
 
     <<: *deploy_steps
 
