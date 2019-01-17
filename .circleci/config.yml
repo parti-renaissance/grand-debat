@@ -44,11 +44,14 @@ deploy_steps: &deploy_steps
           echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
           gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
           gcloud config set project $GCLOUD_PROJECT
-
+    - run:
+        name: "build app"
+        command: |
+          yarn build
     - run:
         name: "[gsutil] push image to "
         command: |
-          gsutil rsync -R build/ $BUCKET
+          gsutil rsync -R build $BUCKET
 
 jobs:
   build:
