@@ -2,7 +2,7 @@ import React from 'react';
 
 const Chief = props => (
 	<div className="chief">
-		<a href={props.url} target="_blank">
+		<a href={props.url} target="_blank" rel="noopener noreferrer">
 			<img src={props.img} alt="photographie de la présidente" />
 		</a>
 		<p>{props.title}</p>
