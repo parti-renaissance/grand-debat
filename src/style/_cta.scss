@@ -15,7 +15,7 @@
         @media (max-width: $mobile) {
             flex-direction: column;
             padding: 30px 0;
-        } 
+        }
 
         &>div {
             width: 50%;
@@ -24,7 +24,7 @@
 
             @media (max-width: $mobile) {
                 width: 100%;
-            } 
+            }
 
             &>div {
                 display: flex;
@@ -35,7 +35,7 @@
 
                 @media (max-width: $mobile) {
                     margin-top: 20px;
-                } 
+                }
                 &>div {
                     width: 80%;
                     display: flex;
@@ -54,7 +54,7 @@
     }
 
     button{
-     
+
         text-transform: uppercase;
         background-color: $blue;
         color: white;
@@ -69,7 +69,7 @@
         @media (max-width: $mobile) {
             width: 100%;
             padding: 20px;
-         } 
+         }
 
         &:hover{
          background-color: white;
@@ -77,21 +77,21 @@
          border: 1px solid $blue;
          transition: all 0.5s;
          cursor: pointer;
-        } 
- 
+        }
+
         &.pink {
             color:white;
             background-color: $pink;
             border: 1px solid $pink;
             transition: all 0.5s;
-         
+
             &:hover{
              background-color: white;
              color: $pink;
              border: 1px solid $pink;
              transition: all 0.5s;
              cursor: pointer;
-            } 
+            }
         }
      }
    hr {
@@ -99,4 +99,27 @@
        width: 80%;
        margin: 0 auto;
    }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-roboto;
+  padding: 40px 0;
+  justify-content: center;
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+  }
+
+  li {
+    padding: 0 10px;
+  }
 }
