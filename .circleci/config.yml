@@ -86,7 +86,7 @@ workflows:
       - build:
           filters:
             branches:
-              only: gcloud-storage
+              only: master
       - deploy_staging:
           requires:
             - build
