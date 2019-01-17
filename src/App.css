@@ -936,6 +936,10 @@ button a {
   padding: 10px;
   font-family: "Gillsans", "Roboto", Helvetica, sans-serif;
   margin: 5px 0; }
+  @media (max-width: 650px) {
+    .cta button {
+      width: 100%;
+      padding: 20px; } }
   .cta button:hover {
     background-color: white;
     color: #1D5FD1;

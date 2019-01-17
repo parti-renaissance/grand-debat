@@ -66,6 +66,12 @@
         font-family: $font-gillsans;
         margin: 5px 0;
 
+        @media (max-width: $mobile) {
+            width: 100%;
+            padding: 20px;
+            
+         } 
+
         &:hover{
          background-color: white;
          color: $blue;
