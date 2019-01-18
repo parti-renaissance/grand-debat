@@ -5,7 +5,7 @@ const Explanatory = () => {
 		'La transition écologique au quotidien',
 		'La fiscalité et les dépenses publiques',
 		'La démocratie et la citoyenneté',
-		'L’organisation de l’État et des services publiques'
+		'L’organisation de l’État et des services publics'
 	];
 
 	return (
