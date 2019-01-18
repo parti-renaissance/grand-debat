@@ -8,7 +8,7 @@ const Workshop = () => {
 	const chiefs = [
 		{
 			title: 'Brune POIRSON',
-			description: 'Présidente du groupe de travail sur <p class="blue">la vie quotidienne</p>',
+			description: 'Présidente du groupe de travail sur <p class="blue">la transition écologique</p>',
 			img: poirson_img,
 			url: 'https://youtu.be/YNJl4GZmwTs'
 		},
@@ -27,7 +27,7 @@ const Workshop = () => {
 		},
 		{
 			title: 'Bénédicte PEYROL',
-			description: 'Présidente du groupe de travail sur <p class="blue">la fiscalité</p>',
+			description: 'Présidente du groupe de travail sur <p class="blue">la fiscalité et la dépense publique</p>',
 			img: peyrol_img,
 			url: 'https://youtu.be/hTQZ1iS0dX8'
 		}
@@ -37,7 +37,7 @@ const Workshop = () => {
 			<h4>Les groupes des travail</h4>
 			<div className="l__wrapper--narrow">
 				<p>
-					Les groupes de travail de La République En Marche sont présidés par <strong>4 personnalités politiques
+					Les groupes de travail de <em>La République En Marche</em> sont présidés par <strong>4 personnalités politiques
 					d’envergure qui s’assureront</strong> que le débat soit le plus ouvert et transparent possible, et <strong>que nos
 					propositions soient aussi ambitieuses que notre mouvement</strong>. Ces groupes remettront la contribution du
 					mouvement au Gouvernement sur la base des propositions de marcheurs.
@@ -53,11 +53,10 @@ const Workshop = () => {
 				))}
 			</div>
 			<p className="small">
-				Chacun de ces groupes de travail sera composé d’une quinzaine de membres parmi lesquels des députés, des
-				sénateurs, des élus locaux, des membres du Bureau Exécutif, des référents, des Jeunes Avec Macron, des
-				adhérents, des membres de cabinet ministériel et des experts. Ces derniers auditionneront de nombreuses
-				personnalités qualifiées (adhérents, élus, administration, syndicats, associations, entreprises et
-				Think-Tank) pour éclairer leur travail.
+				Chacun de ces groupes de travail est composé d’une quinzaine de membres parmi lesquels des députés, des
+				sénateurs, des élus locaux, des membres du Bureau Exécutif de LaREM, des référents, des Jeunes Avec Macron, des
+				adhérents, des personnalités qualifiées. Ces derniers auditionneront de nombreuses
+				personnalités qualifiées (adhérents, élus, administration, syndicats, associations, entreprises et think-tanks) pour éclairer leur travail.
 			</p>
 		</div>
 	);

@@ -50,9 +50,19 @@
             }
 
             h4 {
-                margin-top: 40px;
-                margin-bottom: 20px;
+                margin-top: 0;
+                margin-bottom: 0;
             }
+
+            h5 {
+                margin-bottom: 5px;
+                font-family: $font-gillsans;
+                @include text--default;
+                color: $blue;
+                text-transform: uppercase;
+                font-weight: normal;
+            }
+
             p {
                 font-size: $text--size-default;
             }
