@@ -6,10 +6,19 @@
   justify-content: center;
   text-align: center;
 
+  span {
+    color: white;
+    opacity: .7;
+  }
+
   ul {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+
+    a {
+      color: white;
+    }
 
     @media (max-width: $tablet) {
         flex-direction: column;

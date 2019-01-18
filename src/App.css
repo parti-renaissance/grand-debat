@@ -686,12 +686,51 @@ button a {
         font-size: 34px;
         letter-spacing: -0.5px;
         line-height: 38px; } }
+  .header__bubble__one {
+    background-image: url("img/bubble.svg");
+    position: absolute;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    width: 180px;
+    right: 4%; }
+  .header__bubble__two {
+    background-image: url("img/bubble.svg");
+    position: absolute;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    width: 100px;
+    right: 15%;
+    top: 40%;
+    transform: rotate(180deg) scaleX(-1); }
+  .header__bubble__three {
+    background-image: url("img/bubble.svg");
+    position: absolute;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    width: 170px;
+    left: 10%;
+    top: 35%;
+    transform: rotate(180deg); }
+  @media (max-width: 1000px) {
+    .header__bubble {
+      display: none; } }
 
 .explanatory {
   padding: 80px 0; }
   @media (max-width: 650px) {
     .explanatory {
       padding: 50px 0; } }
+  .explanatory__phases {
+    margin-top: 50px; }
+  .explanatory .phase--name {
+    font-family: "Gillsans", "Roboto", Helvetica, sans-serif;
+    font-size: 22px; }
   .explanatory a {
     color: #1D5FD1; }
   .explanatory > div {
@@ -747,8 +786,16 @@ button a {
           width: 100%;
           margin: 50px 0; } }
       .steps .phases > div h4 {
-        margin-top: 40px;
-        margin-bottom: 20px; }
+        margin-top: 0;
+        margin-bottom: 0; }
+      .steps .phases > div h5 {
+        margin-bottom: 5px;
+        font-family: "Gillsans", "Roboto", Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1D5FD1;
+        text-transform: uppercase;
+        font-weight: normal; }
       .steps .phases > div p {
         font-size: 16px; }
 
@@ -857,11 +904,24 @@ button a {
     .chiefs {
       flex-direction: column;
       padding: 50px 0; } }
+  .chiefs a {
+    position: relative;
+    width: 50%; }
+  .chiefs__overlay {
+    transition: .5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center; }
   .chiefs img {
     width: 80%;
     position: relative;
     bottom: 0px;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    height: auto;
+    transition: .5s ease; }
     @media (max-width: 1000px) {
       .chiefs img {
         margin-top: 30px; } }
@@ -981,10 +1041,15 @@ button a {
   padding: 40px 0;
   justify-content: center;
   text-align: center; }
+  .footer span {
+    color: white;
+    opacity: .7; }
   .footer ul {
     display: flex;
     justify-content: center;
     margin-bottom: 10px; }
+    .footer ul a {
+      color: white; }
     @media (max-width: 1000px) {
       .footer ul {
         flex-direction: column; } }

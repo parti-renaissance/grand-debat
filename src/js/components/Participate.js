@@ -18,9 +18,9 @@ const Participate = () => {
 						<br />
 						<br />
 						<span className="participate__header">Des événements locaux</span><br />
-						L'Atelier des Idées, lancé à l'occasion de ce Grand Débat, correspondra également à un format
+						L'Atelier des idées, lancé à l'occasion de ce Grand Débat, correspondra également à un format
 						d'événement physiques qui seront organisés partout en France par les équipes LaREM : <a rel="noopener noreferrer" href="https://en-marche.fr/evenements/categorie/grand-debat-atelier-idees" target="_blank">trouvez les
-						événement près de chez vous</a>. <strong>Les ateliers seront l’occasion de discuter des 4 grands thèmes de ce débat</strong> et d’élaborer ensemble des propositions concrètes au niveau local, national ou encore européen.
+						événements près de chez vous</a>. <strong>Les ateliers seront l’occasion de discuter des 4 grands thèmes de ce débat</strong> et d’élaborer ensemble des propositions concrètes au niveau local, national ou encore européen.
 					</p>
 				</div>
 				<div>

@@ -39,7 +39,7 @@ class App extends Component {
 				<div className="l__wrapper--narrow">
 					<Cta />
 				</div>
-				<div className="background--grey">
+				<div className="background--blue">
 					<div className="l__wrapper">
 						<Footer />
 					</div>

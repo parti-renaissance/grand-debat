@@ -4,18 +4,21 @@ import adi_img from './../../img/gd-illu-02.svg';
 import co_construction_img from './../../img/gd-illu-03.svg';
 const phases = [
 	{
+		timeframe: 'Janvier',
 		title: 'Sur le terrain',
 		value:
 			'Nos adhérents seront à <b>l’écoute des citoyens</b> ; sur les marchés, dans la rue, dans leurs immeubles, dans leurs commerces, dans des entreprises, associations et syndicats afin de <b>comprendre ce qui va et ce qui ne va pas</b> et d’<b>aller chercher les bonnes idées chez ceux qui vivent et font les choses.</b>',
 		img: terrain_img
 	},
 	{
+		timeframe: 'Février',
 		title: "L'Atelier des Idées",
 		value:
 			'Nos adhérents pourront <b>rédiger</b>, seuls ou à plusieurs, en ligne ou lors d’événements locaux,<b> des propositions structurées grâce à un outil numérique d’intelligence collective innovant</b>, lancé à l’occasion de ce débat.',
 		img: adi_img
 	},
 	{
+		timeframe: 'Février - Mars',
 		title: 'Co-construction',
 		value:
 			'<a href="#Workshop">Quatre groupes de travail</a> - un par thématique - sont chargés de <b>construire la contribution finale</b> à partir des diverses propositions de marcheurs et d’auditions qu’ils pourront décider de mener pour éclairer leur travail.',
@@ -48,7 +51,7 @@ const Steps = () => {
 							{/* <span> {i + 1} </span>
 							<br /> */}
 							<img src={phase.img} alt={phase.img} />
-
+							<h5>{phase.timeframe}</h5>
 							<h4>{phase.title}</h4>
 							<p dangerouslySetInnerHTML={{ __html: phase.value }} />
 						</div>

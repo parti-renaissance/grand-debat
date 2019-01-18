@@ -1,5 +1,4 @@
 .chiefs {
-
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -10,11 +9,29 @@
         padding: 50px 0;
     }
 
+    a {
+      position: relative;
+      width: 50%;
+    }
+
+    &__overlay {
+      transition: .5s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
     img {
         width: 80%;
         position: relative;
         bottom: 0px;
         transition : all 0.3s;
+
+        height: auto;
+        transition: .5s ease;
 
         @media (max-width: $tablet) {
             margin-top: 30px;
@@ -26,15 +43,17 @@
             transition : all 0.3s;
             cursor: pointer;
         }
-
     }
+
     p {
         font-family: $font-roboto;
         @include text--default;
     }
+
     span {
         width: 70%;
     }
+
     .blue {
         color: $blue !important;
     }

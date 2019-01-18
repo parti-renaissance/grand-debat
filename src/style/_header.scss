@@ -27,14 +27,56 @@
             @include text--medium-large;
             text-align: center;
         }
-
-
     }
+
     .type-wrap {
         span {
             @include text--extra-large;
             font-weight: bold;
         }
 
+    }
+
+    &__bubble__one {
+      background-image: url('img/bubble.svg');
+      position: absolute;
+      height: 140px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      width: 180px;
+      right: 4%;
+    }
+
+    &__bubble__two {
+      background-image: url('img/bubble.svg');
+      position: absolute;
+      height: 70px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      width: 100px;
+      right: 15%;
+      top: 40%;
+      transform: rotate(180deg) scaleX(-1);
+    }
+
+    &__bubble__three {
+      background-image: url('img/bubble.svg');
+      position: absolute;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      width: 170px;
+      left: 10%;
+      top: 35%;
+      transform: rotate(180deg);
+    }
+
+    &__bubble {
+      @media (max-width: $tablet) {
+          display: none;
+      }
     }
 }
