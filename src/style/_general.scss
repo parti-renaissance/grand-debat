@@ -20,6 +20,7 @@ body {
 a {
     color: $blue;
     text-decoration: none;
+    transition: all 0.2s;
 
     &:hover {
       text-decoration: underline;
@@ -85,6 +86,7 @@ h5 {
 h6 {
     margin: 10px 0 20px;
     @include text--medium;
+    text-align: center;
 
     @media (max-width: $mobile) {
         margin: 15px 0 30px;

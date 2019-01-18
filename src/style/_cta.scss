@@ -57,7 +57,7 @@
         }
     }
 
-    button{
+    button {
 
         text-transform: uppercase;
         background-color: $blue;
@@ -81,6 +81,10 @@
          border: 1px solid $blue;
          transition: all 0.5s;
          cursor: pointer;
+        }
+
+        a {
+          transition: none;
         }
 
         &.pink {

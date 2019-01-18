@@ -34,7 +34,7 @@ const Workshop = () => {
 	];
 	return (
 		<div className="workshop" id="Workshop">
-			<h4>Les groupes des travail</h4>
+			<h4>Les groupes de travail</h4>
 			<div className="l__wrapper--narrow">
 				<p>
 					Les groupes de travail de <em>La République En Marche</em> sont présidés par <strong>4 personnalités politiques

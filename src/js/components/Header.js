@@ -8,7 +8,9 @@ const Header = () => {
 			<div className="header__bubble header__bubble__two"></div>
 			<div className="header__bubble header__bubble__three"></div>
 			<h3>
-				<em>EM !</em>
+				<a href="https://en-marche.fr" rel="noopener noreferrer" target="_blank">
+					<em>EM!</em>
+				</a>
 			</h3>
 
 			<h1>Grand Débat National, </h1>

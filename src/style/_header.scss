@@ -3,6 +3,7 @@
     color: white;
     text-align: center;
     padding: 80px 0 200px 0;
+    position: relative;
 
     @media (max-width: $mobile) {
         padding: 50px 0 ;
@@ -26,6 +27,15 @@
         @media (max-width: $mobile) {
             @include text--medium-large;
             text-align: center;
+        }
+
+        a {
+          color: white;
+
+          &:hover {
+            text-decoration: none;
+            opacity: 0.7;
+          }
         }
     }
 
@@ -57,7 +67,7 @@
       background-size: contain;
       width: 100px;
       right: 15%;
-      top: 40%;
+      top: 60%;
       transform: rotate(180deg) scaleX(-1);
     }
 
@@ -70,7 +80,7 @@
       background-size: contain;
       width: 170px;
       left: 10%;
-      top: 35%;
+      top: 50%;
       transform: rotate(180deg);
     }
 
