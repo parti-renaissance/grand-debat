@@ -5,7 +5,7 @@ const Cta = props => (
 		<div className="cta">
 			<div>
 				<div>
-					<h4>Notre révolution démocratique à besoin de vous</h4>
+					<h4>Notre révolution démocratique a besoin de vous</h4>
 					<p>
 						L'indépendance de LaREM, c'est aussi son indépendance financière. Grâce aux dons, et uniquement grâce à
 						eux, nous avons réussi à lancer un mouvement inédit. Cette liberté, c'est notre ADN. Contribuez.
