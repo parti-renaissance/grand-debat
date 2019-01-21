@@ -1,102 +1,131 @@
-version: 2
+version: 2.1
 
-defaults: &defaults
-  docker:
-    - image: circleci/node:8
+
+executors:
+  default_node:
+      docker:
+        - image: circleci/node:8
 
 node_key: &node_key
   key: node-deps-{{ checksum "yarn.lock" }}
 
-restore_node: &restore_node
-  restore_cache:
-    <<: *node_key
+commands:
+  restore_node_cache:
+    description: "restore node modules from cache"
+    steps:
+      - restore_cache:
+          <<: *node_key
 
-save_node: &save_node
-  save_cache:
-    <<: *node_key
-    paths:
-      - node_modules
+  save_node_cache:
+    description: "save node modules to cache"
+    steps:
+      - save_cache:
+          <<: *node_key
+          paths:
+            - node_modules
+        
+  install_node_dependencies: 
+    description: "Install node dependencies"
+    steps:
+      - run:
+          command: |
+            if [ ! -d node_modules ]; then
+              yarn --pure-lockfile
+            fi
 
-install_node: &install_node
-  run:
-    name: Install node dependencies
-    command: |
-      if [ ! -d node_modules ]; then
-        yarn --pure-lockfile
-      fi
+  deploy_to_gstorage:
+    description: "Deploy app to a Google Storage bucket"
+    parameters:
+        bucket:
+          type: string
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: "[gsutil] deploy to Google Storage"
+          command: |
+            gsutil rsync -R build << parameters.bucket >>
 
-deploy_steps: &deploy_steps
-  <<: *defaults
-  steps:
-    - checkout
-    - <<: *restore_node
-    - run:
-        name: "[install] install GCloud SDK"
-        command: |
-          curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --disable-prompts
-          ~/google-cloud-sdk/install.sh --usage-reporting=false --path-update=true --bash-completion=true --rc-path=~/.bashrc --additional-components kubectl
-          sudo ln -s ~/google-cloud-sdk/bin/gcloud /usr/bin
-          sudo ln -s ~/google-cloud-sdk/bin/kubectl /usr/bin
-          sudo ln -s ~/google-cloud-sdk/bin/gsutil /usr/bin
-    - run:
-        name: "[gcloud] authenticate GCloud SDK"
-        command: |
-          echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
-          gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
-          gcloud config set project $GCLOUD_PROJECT
-    - run:
-        name: "build app"
-        command: |
-          yarn build
-    - run:
-        name: "[gsutil] push image to a google storage bucket"
-        command: |
-          gsutil rsync -R build $BUCKET
-          gsutil web set -m index.html $BUCKET
+  build_app:
+    description: "Build app"
+    steps:
+      - run:
+          name: "build app"
+          command: |
+            yarn build
+
 
 jobs:
   build:
-    <<: *defaults
-
+    description: "build app"
+    executor: default_node
     steps:
       - checkout
-      - <<: *restore_node
-      - <<: *install_node
-      - <<: *save_node
+      - restore_node_cache
+      - install_node_dependencies
+      - build_app
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
+      - save_node_cache
 
-  deploy_staging:
-    environment:
-      ENV: STAGING
-      BUCKET: gs://staging-grand-debat.en-marche.fr
+  deploy: 
+    description: "deploy app"
+    executor: default_node
+    parameters:
+      bucket:
+        description: "URL of the Google storage bucket the app is deployed to"
+        type: string
+    steps:
+      - run:
+          name: "[install] install GCloud SDK"
+          command: |
+            curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --disable-prompts
+            ~/google-cloud-sdk/install.sh --usage-reporting=false --path-update=true --bash-completion=true --rc-path=~/.bashrc --additional-components kubectl
+            sudo ln -s ~/google-cloud-sdk/bin/gcloud /usr/bin
+            sudo ln -s ~/google-cloud-sdk/bin/kubectl /usr/bin
+            sudo ln -s ~/google-cloud-sdk/bin/gsutil /usr/bin
+      - run:
+          name: "[gcloud] authenticate GCloud SDK"
+          command: |
+            echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
+            gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
+            gcloud config set project $GCLOUD_PROJECT
+      - deploy_to_gstorage:
+          bucket: <<parameters.bucket>>
 
-    <<: *deploy_steps
-
-  deploy_prod:
-    environment:
-      ENV: PROD
-      BUCKET: gs://grand-debat.en-marche.fr
-
-    <<: *deploy_steps
 
 workflows:
-  version: 2
+
+  just-build-other-branches:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: master
+
 
   build-deploy-staging:
     jobs:
-      - build
-
-      - deploy_staging:
-          requires:
-            - build
+      - build:
           filters:
             branches:
               only: master
+      - deploy:
+          bucket: gs://staging-grand-debat.en-marche.fr
+          requires:
+            - build
 
-  deploy-prod:
+  build-deploy-prod:
     jobs:
-      - deploy_prod:
+      - build:
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /^[0-9]+\.[0-9]+\.[0-9]+/
+      - deploy:
+          bucket: gs://grand-debat.en-marche.fr
+          requires:
+            - build
