@@ -103,19 +103,7 @@ workflows:
       - build:
           filters:
             branches:
-              ignore: master
-
-
-  build-deploy-staging:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only: master
-      - deploy:
-          bucket: gs://staging-grand-debat.en-marche.fr
-          requires:
-            - build
+              ignore: ci-config
 
   build-deploy-prod:
     jobs:
@@ -129,4 +117,16 @@ workflows:
           bucket: gs://grand-debat.en-marche.fr
           requires:
             - build
+
+  build-deploy-staging:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: ci-config
+      - deploy:
+          bucket: gs://staging-grand-debat.en-marche.fr
+          requires:
+            - build
+
 
