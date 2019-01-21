@@ -11,7 +11,7 @@ node_key: &node_key
 
 commands:
   restore_node_cache:
-    description: "restore node modules from cache"`
+    description: "restore node modules from cache"
     steps:
       - restore_cache:
         <<: *node_key
