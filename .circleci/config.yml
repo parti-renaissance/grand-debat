@@ -39,6 +39,8 @@ commands:
         bucket:
           type: string
     steps:
+      - attach_workspace:
+          at: .
       - run:
           name: "[gsutil] deploy to Google Storage"
           command: |
