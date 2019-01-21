@@ -63,7 +63,7 @@ jobs:
       - install_node_dependencies
       - build_app
       - persist_to_workspace:
-          root: ./
+          root: .
           paths:
             - build
       - save_node_cache
