@@ -92,31 +92,30 @@ jobs:
 workflows:
 
   just-build-other-branches:
-    filters:
-      branches:
-        ignore: 
-          - master
     jobs:
       - build:
+        filters:
+          branches:
+            ignore: ci-config
 
 
   build-deploy-staging:
-    filters:
-      branches:
-        only: master
     jobs:
-      - build
+      - build:
+        filters:
+          branches:
+            only: ci-config
       - deploy:
           bucket: gs://staging-grand-debat.en-marche.fr
           requires:
             - build
 
   build-deploy-prod:
-    filters:
-      tags:
-        only: /^[0-9]+\.[0-9]+\.[0-9]+/
     jobs:
-      - build
+      - build:
+        filters:
+          tags:
+            only: /^[0-9]+\.[0-9]+\.[0-9]+/
       - deploy:
           bucket: gs://grand-debat.en-marche.fr
           requires:
