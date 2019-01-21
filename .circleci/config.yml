@@ -14,24 +14,24 @@ commands:
     description: "restore node modules from cache"
     steps:
       - restore_cache:
-        <<: *node_key
+          <<: *node_key
 
   save_node_cache:
     description: "save node modules to cache"
     steps:
       - save_cache:
-        <<: *node_key
-        paths:
-          - node_modules
-
+          <<: *node_key
+          paths:
+            - node_modules
+        
   install_node_dependencies: 
     description: "Install node dependencies"
     steps:
       - run:
-        command: |
-          if [ ! -d node_modules ]; then
-            yarn --pure-lockfile
-          fi
+          command: |
+            if [ ! -d node_modules ]; then
+              yarn --pure-lockfile
+            fi
 
   deploy_to_gstorage:
     description: "Deploy app to a Google Storage bucket"
@@ -55,6 +55,7 @@ commands:
 
 jobs:
   build:
+    description: "build app"
     executor: default_node
     steps:
       - checkout
@@ -86,7 +87,7 @@ jobs:
             gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
             gcloud config set project $GCLOUD_PROJECT
       - deploy_to_gstorage:
-        bucket: <<parameters.bucket>>
+          bucket: <<parameters.bucket>>
 
 
 workflows:
@@ -94,17 +95,17 @@ workflows:
   just-build-other-branches:
     jobs:
       - build:
-        filters:
-          branches:
-            ignore: ci-config
+          filters:
+            branches:
+              ignore: ci-config
 
 
   build-deploy-staging:
     jobs:
       - build:
-        filters:
-          branches:
-            only: ci-config
+          filters:
+            branches:
+              only: ci-config
       - deploy:
           bucket: gs://staging-grand-debat.en-marche.fr
           requires:
@@ -113,9 +114,9 @@ workflows:
   build-deploy-prod:
     jobs:
       - build:
-        filters:
-          tags:
-            only: /^[0-9]+\.[0-9]+\.[0-9]+/
+          filters:
+            tags:
+              only: /^[0-9]+\.[0-9]+\.[0-9]+/
       - deploy:
           bucket: gs://grand-debat.en-marche.fr
           requires:
