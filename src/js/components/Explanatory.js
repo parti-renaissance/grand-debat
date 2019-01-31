@@ -12,13 +12,8 @@ const Explanatory = () => {
 		<div className="explanatory">
 			<h4>C'est quoi le Grand Débat National ?</h4>
 			<p className="muted">
-				Dans le contexte de la mobilisation dite « des gilets jaunes », le Grand Débat National a été annoncé en
-				décembre par le Président de la République et le Gouvernement pour prendre les contributions des
-				Françaises et des Français sur <strong>quatre grandes thématiques</strong> liées à nos institutions et nos politiques
-				publiques.{' '}
-				<a href="https://granddebat.fr/" target="_blank" rel="noopener noreferrer">
-					<em>En savoir plus</em>
-				</a>.
+				Le Grand Débat National a été lancé en
+				décembre par le Président de la République et le Gouvernement. Le but ? Permettre à tous les Français de débattre des questions essentielles qui régissent nos vies, à savoir :
 			</p>
 			<div className="explanatory__phases">
 				<div>
@@ -29,6 +24,12 @@ const Explanatory = () => {
 					))}
 				</div>
 			</div>
+			<p className="muted">
+				Ce débat, qui a pour ambition d'intégrer tous les citoyens et de déboucher sur des propositions concrètes de politiques publiques, a commencé le 15 janvier. Il se clôturera le 15 mars et un synthèse en sera rendue par l’exécutif en avril 2019.
+			</p>
+			<p className="muted strong">
+				Ce débat est un moment historique pour notre pays, une opportunité pour réinventer la démocratie et construire l'avenir ensemble. À nous de nous en saisir.
+			</p>
 		</div>
 	);
 };

@@ -587,6 +587,9 @@ p {
 .muted {
   color: #6A6A6A; }
 
+.strong {
+  font-weight: bold; }
+
 h4 {
   font-size: 34px;
   letter-spacing: -0.5px;
@@ -729,10 +732,11 @@ button a {
     .explanatory {
       padding: 50px 0; } }
   .explanatory__phases {
-    margin-top: 50px; }
+    margin: 20px 0 40px; }
   .explanatory .phase--name {
     font-family: "Gillsans", "Roboto", Helvetica, sans-serif;
-    font-size: 22px; }
+    font-size: 18px;
+    margin: 10px 0; }
   .explanatory a {
     color: #1D5FD1; }
   .explanatory > div {
@@ -759,6 +763,29 @@ button a {
     margin: 0 0 20px 0; }
   .steps h6 {
     margin: 40px 0 20px 0; }
+  .steps ol {
+    font-family: "Roboto", Helvetica, sans-serif;
+    padding-left: 0;
+    margin-top: 40px !important;
+    margin-bottom: 70px;
+    list-style: none; }
+    .steps ol > li {
+      margin-bottom: 40px; }
+      .steps ol > li > span {
+        color: black;
+        font-style: italic; }
+    .steps ol ul {
+      margin: 5px 0;
+      padding-left: 40px;
+      list-style: disc; }
+      .steps ol ul span.coming-soon {
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-left: 5px;
+        font-size: 13px;
+        font-weight: bold;
+        background: #42D061;
+        color: white; }
   .steps .phases {
     display: flex;
     justify-content: space-around; }
