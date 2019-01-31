@@ -23,6 +23,11 @@ class App extends Component {
 						<Steps />
 					</div>
 				</div>
+				<div>
+					<div className="l__wrapper">
+						<Workshop />
+					</div>
+				</div>
 				<div className="background--blue">
 					<div className="l__wrapper--narrow">
 						<Deputies />
@@ -30,11 +35,6 @@ class App extends Component {
 				</div>
 				<div className="l__wrapper">
 					<Participate />
-				</div>
-				<div className="background--grey">
-					<div className="l__wrapper">
-						<Workshop />
-					</div>
 				</div>
 				<div className="l__wrapper--narrow">
 					<Cta />

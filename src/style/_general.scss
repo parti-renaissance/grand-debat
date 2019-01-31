@@ -75,6 +75,10 @@ p {
     color: $grey;
 }
 
+.strong {
+    font-weight: bold;
+}
+
 h4 {
  @include text--large;
 }
