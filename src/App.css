@@ -742,7 +742,7 @@ button a {
   .explanatory > div {
     display: flex;
     align-items: center;
-    justify-content: space-around; }
+    margin-left: 30px; }
     .explanatory > div > div > div {
       display: flex;
       align-items: center;
@@ -753,9 +753,33 @@ button a {
         background-color: #EBF8FF;
         padding: 7px 15px;
         border-radius: 50%; }
+    @media (max-width: 650px) {
+      .explanatory > div {
+        margin-left: 0; } }
 
 .steps {
   padding: 80px 0; }
+  .steps__grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 70px; }
+    .steps__grid > ol {
+      width: 65%; }
+    .steps__grid > div {
+      width: 35%; }
+    @media (max-width: 650px) {
+      .steps__grid {
+        flex-direction: column; }
+        .steps__grid > ol,
+        .steps__grid > div {
+          width: 100%; } }
+  .steps img {
+    width: 95%;
+    margin-top: 10px; }
+    @media (max-width: 650px) {
+      .steps img {
+        width: 100%; } }
   @media (max-width: 650px) {
     .steps {
       padding: 50px 0; } }
@@ -766,9 +790,8 @@ button a {
   .steps ol {
     font-family: "Roboto", Helvetica, sans-serif;
     padding-left: 0;
-    margin-top: 40px !important;
-    margin-bottom: 70px;
-    list-style: none; }
+    list-style: none;
+    margin-right: 40px; }
     .steps ol > li {
       margin-bottom: 40px; }
       .steps ol > li > span {
@@ -850,7 +873,7 @@ button a {
     .participate {
       padding: 50px 0; } }
   .participate h4 {
-    margin-bottom: 20px; }
+    margin-bottom: 40px; }
     @media (max-width: 650px) {
       .participate h4 {
         margin: 0 0 20px 0; } }
@@ -912,6 +935,9 @@ button a {
     @media (max-width: 650px) {
       .participate img {
         width: 100%; } }
+  @media (max-width: 650px) {
+    .participate iframe {
+      max-width: 100%; } }
 
 .workshop {
   padding: 80px 0;

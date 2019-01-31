@@ -1,4 +1,5 @@
 import React from 'react';
+import adi_preview from './../../img/adi_preview.png';
 import terrain_img from './../../img/gd-illu-01.svg';
 import adi_img from './../../img/gd-illu-02.svg';
 import co_construction_img from './../../img/gd-illu-03.svg';
@@ -31,29 +32,34 @@ const Steps = () => {
 			<div className="steps">
 				<div className="l__wrapper--narrow">
 					<h4>Comment y participer ?</h4>
-					<ol className="muted">
-						<li>
-							<span className="strong">J'assiste à des débats près de chez moi</span><br/>
-							Je participe ou j'organise un débat près de chez moi avec ma famille, mes amis, mes collègues, mon association de copropriétaires/de locataires/de parents d’élèves, mes voisins, mon quartier ou autres.
-							<ul>
-								<li><a href="https://granddebat.fr/events" target="_blank" rel="noopener noreferrer">
-									Trouver un événement près de chez moi
-								</a></li>
-								<li><a href="https://granddebat.fr/project/referencer-son-debat/questionnaire/faites-referencer-votre-evenement-1" target="_blank" rel="noopener noreferrer">
-									Organiser un événement
-								</a></li>
-							</ul>
-						</li>
-						<li>
-							<span className="strong">Je propose des solutions sur l'Atelier des idées</span><br/>
-							En tant qu'adhérent(e), je souhaite participer à la contribution politique que fera LaREM en tant que mouvement : un document portant des propositions pour le niveau local, national et européen, qui sera remis à l'exécutif au mois de mars. Pour cela, un nouvel outil d'intelligence collective sera à ma disposition : l’Atelier des Idées.
-							<ul>
-								<li>
-									Découvrir l'Atelier des idées <span className="coming-soon">Disponible début février 2019</span>
-								</li>
-							</ul>
-						</li>
-					</ol>
+					<div className="steps__grid">
+						<ol className="muted">
+							<li>
+								<span className="strong">J'assiste à des débats près de chez moi</span><br/>
+								Je participe ou j'organise un débat près de chez moi avec ma famille, mes amis, mes collègues, mon association de copropriétaires/de locataires/de parents d’élèves, mes voisins, mon quartier ou autres.
+								<ul>
+									<li><a href="https://granddebat.fr/events" target="_blank" rel="noopener noreferrer">
+										Trouver un événement près de chez moi
+									</a></li>
+									<li><a href="https://granddebat.fr/project/referencer-son-debat/questionnaire/faites-referencer-votre-evenement-1" target="_blank" rel="noopener noreferrer">
+										Organiser un événement
+									</a></li>
+								</ul>
+							</li>
+							<li>
+								<span className="strong">Je propose des solutions sur l'Atelier des idées</span><br/>
+								En tant qu'adhérent(e), je souhaite participer à la contribution politique que fera LaREM en tant que mouvement : un document portant des propositions pour le niveau local, national et européen, qui sera remis à l'exécutif au mois de mars. Pour cela, un nouvel outil d'intelligence collective sera à ma disposition : l’Atelier des Idées.
+								<ul>
+									<li>
+										Découvrir l'Atelier des idées <span className="coming-soon">Disponible début février 2019</span>
+									</li>
+								</ul>
+							</li>
+						</ol>
+						<div>
+							<img src={adi_preview} alt="atelier des idées" />
+						</div>
+					</div>
 					<h6>La participation du mouvement en 3 temps</h6>
 				</div>
 				<div className="phases">

@@ -1,6 +1,39 @@
 .steps {
     padding: 80px 0;
 
+    &__grid {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      margin-bottom: 70px;
+
+      > ol {
+        width: 65%;
+      }
+
+      > div {
+        width: 35%;
+      }
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+
+        > ol,
+        > div {
+          width: 100%;
+        }
+      }
+    }
+
+    img {
+        width: 95%;
+        margin-top: 10px;
+
+        @media (max-width: $mobile) {
+         width: 100%;
+      }
+    }
+
     @media (max-width: $mobile) {
         padding: 50px 0;
     }
@@ -16,9 +49,8 @@
     ol {
       font-family: $font-roboto;
       padding-left: 0;
-      margin-top: 40px !important;
-      margin-bottom: 70px;
       list-style: none;
+      margin-right: 40px;
 
       > li {
         margin-bottom: 40px;
