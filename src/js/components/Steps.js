@@ -15,7 +15,7 @@ const phases = [
 		timeframe: 'Février',
 		title: "L'Atelier des Idées",
 		value:
-			'Les marcheurs pourront <b>rédiger</b>, seuls ou à plusieurs, <b>des propositions structurées grâce à un outil numérique d’intelligence collective innovant</b>, lancé à l’occasion de ce débat.',
+			'Les marcheurs peuvent <b>rédiger</b>, seuls ou à plusieurs, <b>des propositions structurées grâce à <a href="https://en-marche.fr/atelier-des-idees">cet outil numérique</a> d’intelligence collective innovant</b>, lancé à l’occasion de ce débat.',
 		img: adi_img
 	},
 	{
@@ -48,10 +48,12 @@ const Steps = () => {
 							</li>
 							<li>
 								<span className="strong">Je propose des solutions sur l'Atelier des idées</span><br/>
-								En tant qu'adhérent(e), je souhaite participer à la contribution politique que fera LaREM en tant que mouvement : un document portant des propositions pour le niveau local, national et européen, qui sera remis à l'exécutif au mois de mars. Pour cela, un nouvel outil d'intelligence collective sera à ma disposition : l’Atelier des Idées.
+								En tant qu'adhérent(e), je souhaite participer à la contribution politique que fera LaREM en tant que mouvement : un document portant des propositions pour le niveau local, national et européen, qui sera remis à l'exécutif au mois de mars. Pour cela, un nouvel outil d'intelligence collective est à ma disposition : <a href="https://en-marche.fr/atelier-des-idees" target="_blank" rel="noopener noreferrer">l’Atelier des idées</a>.
 								<ul>
 									<li>
-										Découvrir l'Atelier des idées <span className="coming-soon">Disponible début février 2019</span>
+										<a href="https://en-marche.fr/atelier-des-idees" target="_blank" rel="noopener noreferrer">
+											Découvrir l'Atelier des idées
+										</a>
 									</li>
 								</ul>
 							</li>
