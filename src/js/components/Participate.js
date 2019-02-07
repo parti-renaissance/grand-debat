@@ -6,7 +6,7 @@ const Participate = () => {
 			<div className="participate__grid">
 				<div>
 					<p>
-						<strong>L'Atelier des idées sera lancé début février.</strong> C’est un outil numérique d’intelligence collective, qui sera accessible à tous nos adhérents. Un principe simple : identifiez une problématique et proposez une solution pour y répondre. Une fois publiée, votre proposition devient accessible à l’ensemble des marcheurs qui pourront l’enrichir, la commenter, la soutenir.
+						<strong><a href="https://en-marche.fr/atelier-des-idees" target="_blank" rel="noopener noreferrer">L'Atelier des idées</a> est un outil numérique d’intelligence collective accessible à tous nos adhérents.</strong> Un principe simple : identifiez une problématique et proposez une solution pour y répondre. Une fois publiée, votre proposition devient accessible à l’ensemble des marcheurs qui pourront l’enrichir, la commenter, la soutenir.
 					</p>
 				</div>
 				<div>
